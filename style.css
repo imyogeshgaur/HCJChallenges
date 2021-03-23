@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: #f8f8f8;
+}
+
+.items {
+  display: flex;
+  list-style: none;
+  padding: 1rem 2rem;
+}
+.item {
+  padding: 0rem 4rem;
+}
+.outer_dropdown {
+  margin: 0px 0px 0px 435px;
+  background-color: white;
+  width: 10vw;
+  height: 10vh;
+  border: 2px solid #f8f8f8;
+  display: none;
+}
+.inner_dropdown:hover {
+  background-color: #f8f8f8;
+}
