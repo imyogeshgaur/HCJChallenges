@@ -1,29 +1,74 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+body { font-family: sans-serif; }
 
-.navbar {
-  background-color: #f8f8f8;
-}
-
-.items {
-  display: flex;
-  list-style: none;
-  padding: 1rem 2rem;
-}
-.item {
-  padding: 0rem 4rem;
-}
-.outer_dropdown {
-  margin: 0px 0px 0px 435px;
-  background-color: white;
-  width: 10vw;
-  height: 10vh;
-  border: 2px solid #f8f8f8;
+.modal {
+  position: fixed;
   display: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.7);
 }
-.inner_dropdown:hover {
-  background-color: #f8f8f8;
+
+.modal--open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  max-width: 500px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.modal__header {
+  padding: 1em;
+  background-color: rgba(0,0,0,0.1)
+}
+
+.modal__title {
+  font-size: 18px;
+}
+
+.modal__content {
+  padding: 1em;
+  flex-grow: 1;
+}
+
+.modal__footer {
+  padding: 1em;
+  background-color: rgba(0,0,0,0.05)
+}
+
+.modal__footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal__btn-cancel,
+.modal__btn-delete {
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  border: none;
+  color: #fff;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 3px;
+  margin-left: 0.5em;
+}
+
+.modal__btn-delete {
+  background-color: tomato;
+}
+
+@media screen and (max-width: 500px) {
+  .modal--open {
+    display: block;
+  }
+  .modal__container {
+    min-height: 100vh;
+  }
 }
